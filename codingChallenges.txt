@@ -1,7 +1,6 @@
 
 /////
-// IMPORT LIBRARY PACKAGES NEEDED BY YOUR PROGRAM
-// SOME CLASSES WITHIN A PACKAGE MAY BE RESTRICTED
+//
 import { Request, Response } from "express";  //////////////////////////Typscript home controller
 
 /**
