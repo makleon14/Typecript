@@ -1,0 +1,289 @@
+
+/////
+// IMPORT LIBRARY PACKAGES NEEDED BY YOUR PROGRAM
+// SOME CLASSES WITHIN A PACKAGE MAY BE RESTRICTED
+import { Request, Response } from "express";  //////////////////////////Typscript home controller
+
+/**
+ * Home page.
+ * @route GET /
+ */
+export const index = (req: Request, res: Response) => {
+    res.render("home", {
+        title: "Home"
+    });
+};
+
+
+
+// DEFINE ANY CLASS AND METHOD NEEDED
+
+// CLASS BEGINS, THIS CLASS IS REQUIRED
+public class GCD 
+{        
+    // METHOD SIGNATURE BEGINS, THIS METHOD IS REQUIRED
+    public int generalizedGCD( int n, int[] arr)
+{
+    int result = arr[0];
+    for (int i = 1; i < n; i++)
+    {
+        result = gcd(arr[i], result);
+ 
+        if(result == 1)
+        {
+           return 1;
+        }
+    }
+    return result;
+}
+       
+    
+    
+public int gcd(int a, int b)
+{
+    if (a == 0)
+        return b;
+    return gcd(b % a, a);
+}
+    // METHOD SIGNATURE ENDS
+}
+function digitsManipulations(n) {
+// convert n into an array of intergers
+//iterate through and keep multiplying the product by i
+//iterate through and add the sum i+(i+1) back to main sum
+//substact sum from product
+var numarray = Array.from(String(n),Number);
+var product=1;
+var sum=0;
+for(var i=0;i<=numarray.length-1;i++){
+    product=product*numarray[i];
+}
+for(var i=0;i<=numarray.length-1;i++){
+    sum=sum+numarray[i];
+}
+var outputVar=product-sum;
+console.log(outputVar);
+return outputVar;
+
+}
+public class Solution
+{
+  //METHOD SIGNATURE BEGINS, THIS METHOD IS REQUIRED
+    public int[] cellCompete(int[] states, int days)
+    {
+     
+     int[] oldCell=new int[states.Length];
+     for (int i = 0; i < states.Length ; i++ ){
+        oldCell[i] = states[i];
+    }
+   for (int k = 0; k < days ; k++ ){
+        for (int j = 1; j < oldCell.Length - 1 ; j++ ){
+           
+            if ((
+                oldCell[j-1] == 1
+            && oldCell[j+1] == 1) 
+            || (oldCell[j-1] == 0 && oldCell[j+1] == 0)){
+                states[j] = 0;
+            } else{
+                states[j] = 1;
+            }
+        }
+        if (oldCell[1] == 0){
+            states[0] = 0;
+        } else{
+            states[0] = 1;
+        }
+        if (oldCell[6] == 0){
+            states[7] = 0;
+        } else{
+            states[7] = 1;
+        }
+        for (int i = 0; i < states.Length ; i++ ){
+            oldCell[i] = states[i];
+        }
+    } /* */
+    return states;
+    }
+  // METHOD SIGNATURE ENDS
+}
+
+/////////////////////////////////////////////////////////javacript sort array and check if every number in between has is included in the array
+function makeArrayConsecutive2(statues) {
+    //first sort the array
+    //then get the largest value in the array
+    //then get the smallest value in the array
+    //iteterate from to large increment by one if the value is not in the array, increment our output variable.
+ var sortedArray=statues.sort(function(a, b) {
+  return a - b;
+});
+//var sortedArray=statues.sort(); 
+var smallest=sortedArray[0];
+var largest=sortedArray[statues.length-1];
+var outputvar = 0;
+console.log(smallest);
+console.log(largest);
+for(var i=smallest;i<=largest;i++){
+    if (!sortedArray.includes(i)){
+        outputvar =outputvar+1;
+    }
+}
+//console.log("outputvar");
+return(outputvar);
+
+}
+
+/////////////////////////////////solving the n intersting poygon  without; then with recurtion, javascript.
+def shapeArea(n):
+    if n>=10**4 or n<1:
+        return False
+
+    return (n**2+(n-1)**2)
+
+function shapeArea(n) {
+    if(n<0){
+        return false
+    }
+    return (n*n)+((n-1)*(n-1))
+}
+
+console.log(shapeArea(1))
+
+/////////////////////////////////////////////////////////////////C programing FizzBuzz
+
+/*
+ * Complete the 'fizzBuzz' function below.
+ *
+ * The function accepts INTEGER n as parameter.
+ */
+
+void fizzBuzz(int n) {
+for (int i=1;i<=n;i++){
+    
+    if (i%3==0 && i%5==0){
+    printf("FizzBuzz");
+    }
+      if (i%3==0 && i%5!=0){
+    printf("Fizz \n");
+    }
+      if (i%3!=0 && i%5==0){
+    printf("Buzz \n");
+    }
+      if (i%3!=0 && i%5!=0){
+    printf("%d \n",i);
+    }
+     
+ }
+ 
+
+///////////////////////////////////////////////////////////Given an array of integers, find the pair of adjacent elements that has the largest product and return that product.
+function adjacentElementsProduct(inputArray) {
+    var temp =inputArray[0]*inputArray[1];
+    for (var i=0;i<inputArray.length-1;i++){
+        
+    if (parseFloat(inputArray[i])*parseFloat(inputArray[i+1])>temp){
+        temp =inputArray[i]*inputArray[i+1];
+        
+    };
+    
+    }
+    return temp;
+}
+
+///////////////////////////////////////////////////////////reverse a srting(palindrone) javascripr
+function checkPalindrome(inputString) {
+//var arrayOfChars = string.split(inputString);
+var arrayOfChars = Array.from(inputString);
+var reverseArray = arrayOfChars.reverse();
+var joinArray = reverseArray.join("");
+return joinArray==inputString;
+//console.log(JSON.stringify(reverseArray));
+/*if(arrayOfChars.length!=reverseArray.length){
+   return false;
+}
+  else
+  {
+   for(var i=0;i<arrayOfChars.length-2;i++){
+       
+   if(arrayOfChars[i]!==joinArray[i]){
+   return false;}
+   }
+   return true;
+   }
+  */
+  
+ //return isEqual(arrayOfChars, reverseArray);
+//return arrayOfChars.length === reverseArray.length && arrayOfChars.every(function(value, index) { return value === reverseArray[index]})
+
+//return JSON.stringify(arrayOfChars)===JSON.stringify(joinArray);
+}
+
+
+//////////////////////////////////////////////////get century from year
+function centuryFromYear(year) {
+return Math.ceil(year/100)
+}
+
+
+c# class with inheritance
+sing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+namespace testprogram
+{
+    public class Program
+        {
+       
+        public static void Main(string[] args)
+        {
+            animalActions duck=new animalActions();
+            duck.animalName="ducky";
+            duck.animalSize=12;
+            duck.eat("This duck eats a lot");
+            duck.fly("This duck goes high in the air");
+        }
+       }
+   
+        internal class animal
+        {
+         public string animalName;
+         public double animalSize;
+       
+            public animal()
+           {
+             
+           }
+           
+           public animal(string name, double size)
+           {
+              animalName = name;
+              animalSize = size;
+           }
+       }
+   internal class animalActions :animal
+        {
+         
+         internal void eat(string eat)
+         {
+         Console.WriteLine(eat);
+         }
+
+         internal void swim(string swim)
+         {
+         Console.WriteLine(swim);
+         }
+         
+         internal void fly(string fly)
+         {
+         Console.WriteLine(fly);
+         }
+       
+         internal string GetAnimalSound(string sound)
+         {
+         return sound;
+         }
+         
+        }
+   
+}
